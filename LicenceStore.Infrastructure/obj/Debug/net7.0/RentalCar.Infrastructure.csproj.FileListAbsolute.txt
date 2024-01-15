@@ -1,0 +1,17 @@
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Infrastructure.deps.json
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Infrastructure.dll
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Infrastructure.pdb
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Application.dll
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Domain.dll
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Application.pdb
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\bin\Debug\net7.0\RentalCar.Domain.pdb
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.AssemblyInfo.cs
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.csproj.CopyComplete
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.dll
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\refint\RentalCar.Infrastructure.dll
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\RentalCar.Infrastructure.pdb
+C:\Users\petar\Desktop\RentalCar\RentalCar.Infrastructure\obj\Debug\net7.0\ref\RentalCar.Infrastructure.dll
