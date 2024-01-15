@@ -2,8 +2,6 @@
 using LicenceStore.Application.Auth.Commands.CompleteLoginCommand;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using LicenceStore.Application.Auth.Commands.BeginLoginCommand;
-using LicenceStore.Application.Auth.Commands.CompleteLoginCommand;
 
 namespace LicenceStore.Api.Controllers;
 
