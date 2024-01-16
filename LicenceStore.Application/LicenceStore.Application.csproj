@@ -21,6 +21,10 @@
 
     <ItemGroup>
       <Folder Include="Auth\" />
+      <Folder Include="Mappers\Category\" />
+      <Folder Include="Mappers\LicenceType\" />
+      <Folder Include="Mappers\Users\" />
+      <Folder Include="Mappers\Vendor\" />
     </ItemGroup>
 
 </Project>
