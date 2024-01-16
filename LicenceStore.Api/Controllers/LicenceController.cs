@@ -17,7 +17,6 @@ public class LicenceController : ApiControllerBase
     public async Task<ActionResult<LicenceDetailsDto>> GetAllLicences([FromQuery] GetAllLicencesQuery query) =>
         Ok(await Mediator.Send(query));
     
-
     [HttpPost("CreateLicence")]
     public async Task<ActionResult<string>> CreateLicence(CreateLicenceCommand command) =>
         Ok(await Mediator.Send(command));

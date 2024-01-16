@@ -24,6 +24,9 @@ public class Licence : AuditableEntity
     
     [Field("sold")]
     public bool IsSold { get; set; }
+    
+    [Field("bought")]
+    public bool IsBought { get; set; }
 
     [Field("price")]
     public double Price { get; set; }
