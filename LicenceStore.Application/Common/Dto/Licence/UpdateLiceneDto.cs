@@ -8,6 +8,7 @@ public record UpdateLicenceDto(
     string? Type,
     string? Owner,
     bool? IsSold,
+    bool? IsBought,
     double? Price,
     string? Img,
     string? Description
