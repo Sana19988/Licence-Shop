@@ -1,1 +1,5 @@
 ﻿LicenceStore.Api/bin/Debug/
+﻿LicenceStore.Application/bin/Debug/
+﻿LicenceStore.Domain/bin/Debug/
+﻿LicenceStore.Infrastructure/bin/Debug/
+/.idea/.idea.LicenceStore/.idea/vcs.xml
