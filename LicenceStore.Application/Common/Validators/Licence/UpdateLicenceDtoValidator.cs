@@ -36,6 +36,13 @@ public class UpdateLicenceDtoValidator : AbstractValidator<UpdateLicenceDto>
                 if (l == true) return true;
                 return l == false;
             });
+        RuleFor(licence => licence.IsBought)
+            .NotEmpty()
+            .Must(l =>
+            {
+                if (l == true) return true;
+                return l == false;
+            });
     }
     
 }
