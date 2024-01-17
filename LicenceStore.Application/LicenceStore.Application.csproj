@@ -21,8 +21,6 @@
 
     <ItemGroup>
       <Folder Include="Auth\" />
-      <Folder Include="Category\Commands\" />
-      <Folder Include="Category\Queries\" />
       <Folder Include="Mappers\Category\" />
       <Folder Include="Mappers\Users\" />
       <Folder Include="Mappers\Vendor\" />
