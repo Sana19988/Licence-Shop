@@ -12,6 +12,13 @@ public class Vendor : AuditableEntity
         get;
         set;
     }
+    
+    [Field("type")]
+    public string Type
+    {
+        get;
+        set;
+    }
 
     public Vendor()
     {

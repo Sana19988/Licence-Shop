@@ -27,7 +27,7 @@ public record CreateLicenceCommandHandler : IRequestHandler<CreateLicenceCommand
             throw new Exception("Vendor not found");
         }
 
-        var category = await DB.Find<Category>()
+        var category = await DB.Find<Domain.Entities.Category>()
             .OneAsync(request.Licence.CategoryId, cancellationToken);
 
         if (category == null)
@@ -35,7 +35,7 @@ public record CreateLicenceCommandHandler : IRequestHandler<CreateLicenceCommand
             throw new Exception("Category not found");
         }
         
-        var type = await DB.Find<LicenceType>()
+        var type = await DB.Find<Domain.Entities.LicenceType>()
             .OneAsync(request.Licence.TypeId, cancellationToken);
 
         if (type == null)
@@ -51,8 +51,8 @@ public record CreateLicenceCommandHandler : IRequestHandler<CreateLicenceCommand
             StartDate = request.Licence.StartDate,
             EndDate = request.Licence.EndDate,
             Vendor = new One<Vendor>(vendor),
-            Category = new One<Category>(category),
-            Type = new One<LicenceType>(type),
+            Category = new One<Domain.Entities.Category>(category),
+            Type = new One<Domain.Entities.LicenceType>(type),
             IsSold = request.Licence.IsSold,
             Price = request.Licence.Price,
             Img = request.Licence.Img,
