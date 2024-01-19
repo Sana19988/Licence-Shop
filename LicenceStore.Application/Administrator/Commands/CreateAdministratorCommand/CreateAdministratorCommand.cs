@@ -1,10 +1,11 @@
 ﻿using LicenceStore.Application.Common.Constants;
+using LicenceStore.Application.Common.Dto.User;
 using LicenceStore.Application.Common.Interfaces;
 using MediatR;
 
 namespace LicenceStore.Application.Administrator.Commands.CreateAdministratorCommand;
 
-public record CreateAdministratorCommand(string EmailAddress) : IRequest;
+public record CreateAdministratorCommand(CreateUserDto Admin) : IRequest;
 
 public class CreateAdminHandler : IRequestHandler<CreateAdministratorCommand>
 {
@@ -17,7 +18,7 @@ public class CreateAdminHandler : IRequestHandler<CreateAdministratorCommand>
 
     public async Task Handle(CreateAdministratorCommand request, CancellationToken cancellationToken)
     {
-        await _userService.CreateUserAsync(request.EmailAddress,
-            new List<string> { RentalCarAuthorization.Administrator });
+        await _userService.CreateUserAsync(request.Admin,
+            new List<string> { LicenceStoreAuthorization.Administrator });
     }
 }
