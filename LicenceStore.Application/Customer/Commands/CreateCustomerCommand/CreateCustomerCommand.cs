@@ -1,10 +1,11 @@
 ﻿using LicenceStore.Application.Common.Constants;
+using LicenceStore.Application.Common.Dto.User;
 using LicenceStore.Application.Common.Interfaces;
 using MediatR;
 
 namespace LicenceStore.Application.Customer.Commands.CreateCustomerCommand;
 
-public record CreateCustomerCommand(string EmailAddress) : IRequest;
+public record CreateCustomerCommand(CreateUserDto Customer) : IRequest;
 
 public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand>
 {
@@ -17,7 +18,7 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand>
 
     public async Task Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
     {
-        await _userService.CreateUserAsync(request.EmailAddress,
-            new List<string> { RentalCarAuthorization.Customer });
+        await _userService.CreateUserAsync(request.Customer,
+            new List<string> { LicenceStoreAuthorization.Customer });
     }
 }
