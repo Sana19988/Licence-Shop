@@ -8,7 +8,6 @@ namespace LicenceStore.Api.Controllers;
 [Route("licence")]
 public class LicenceController : ApiControllerBase
 {
-
     [HttpGet("GetOneLicence")]
     public async Task<ActionResult<LicenceDetailsDto>> GetOneLicence([FromQuery] GetOneLicenceQuery query) =>
         Ok(await Mediator.Send(query));
@@ -29,4 +28,7 @@ public class LicenceController : ApiControllerBase
     public async Task<ActionResult<string>> DeleteLicence(DeleteLicenceCommand command) =>
         Ok(await Mediator.Send(command));
 
+    [HttpGet("GetPagedListLicence")]
+    public async Task<ActionResult<LicencePagedListDto>> GetPagedListLicence([FromQuery] GetPagedListLicenceQuery query) =>
+        Ok(await Mediator.Send(query));
 }
