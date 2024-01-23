@@ -27,4 +27,8 @@ public class LicenceTypeController : ApiControllerBase
     [HttpDelete("CreateLicenceType")]
     public async Task<ActionResult<string>> DeleteLicenceType(DeleteLicenceTypeCommand command) =>
         Ok(await Mediator.Send(command));
+    
+    [HttpGet("GetPagedListLicenceType")]
+    public async Task<ActionResult<LicenceTypePagedListDto>> GetPagedListLicenceType([FromQuery] GetPagedListLicenceTypeQuery query) =>
+        Ok(await Mediator.Send(query));
 }
