@@ -13,6 +13,7 @@ public class ApplicationUser : MongoIdentityUser<Guid>, IModifiedOn, IEntity
     public override string? Email { get; set; }
     public List<Licence> Licences { get; set; }
     public List<string> Roles { get; set; }
+    public double Balance { get; set; }
     
     public DateTime ModifiedOn { get; set; }
     public string GenerateNewID()
