@@ -20,8 +20,8 @@ public class GetUserPagedQueryHandler : IRequestHandler<GetUserPagedListQuery, U
 
     public async Task<UserPagedListDto> Handle(GetUserPagedListQuery request, CancellationToken cancellationToken)
     {
-        var res = await DB.PagedSearch<LicenceStore.Domain.Entities.ApplicationUser>()
-            .Sort(b => b.Name, Order.Ascending)
+        var res = await DB.PagedSearch<Domain.Entities.ApplicationUser>()
+            .Sort(b => b.Name, MongoDB.Entities.Order.Ascending)
             .ApplyFilters(request)
             .PageSize(request.PageSize)
             .PageNumber(request.PageNumber)
