@@ -23,6 +23,6 @@ public class GetAllLicenceTypesQueryHandler : IRequestHandler<GetAllLicenceTypes
         var licenceTypes = await DB.Find<LicenceStore.Domain.Entities.LicenceType>()
             .ManyAsync(licenceTypes => licenceTypes.Active == true, cancellationToken);
         
-        return await _mapper.Map<Task<List<LicenceTypeDetailsDto>>>(licenceTypes);
+        return _mapper.Map<List<LicenceTypeDetailsDto>>(licenceTypes);
     }
 };

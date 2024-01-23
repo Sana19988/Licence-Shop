@@ -7,7 +7,7 @@ public record CreateLicenceDto(
     string VendorId,
     string CategoryId,
     string TypeId,
-    string OwnerId,
+    string? OwnerId,
     bool IsSold,
     double Price,
     string Img,

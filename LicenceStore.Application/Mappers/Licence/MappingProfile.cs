@@ -26,9 +26,9 @@ public class MappingProfile : Profile
             (await licence.Vendor.ToEntityAsync())!.Name,
             (await licence.Category.ToEntityAsync())!.Name,
             (await licence.Type.ToEntityAsync())!.Name,
-            licence.Owner.Email,
+            licence.Owner?.Email,
             licence.IsSold,
-            licence.IsBougth,
+            licence.IsBought,
             licence.Price,
             licence.Img,
             licence.Description
@@ -37,9 +37,9 @@ public class MappingProfile : Profile
     
     private static LicencePagedListDto GetLicencePagedList(IEnumerable<Domain.Entities.Licence> licences)
     {
-        var licenceList = licences.Select(GetLicenceDetails).ToList();
+        var licencesList = licences.Select(x => GetLicenceDetails(x).Result).ToList();
         
-        return new LicencePagedListDto(licenceList, new PaginationDto(0, 0));
+        return new LicencePagedListDto(licencesList, new PaginationDto(0, 0));
     }
     
 }

@@ -2,6 +2,7 @@
 using LicenceStore.Application.Common.Dto.Category;
 using LicenceStore.Application.Common.Exceptions;
 using MediatR;
+using MongoDB.Bson;
 using MongoDB.Entities;
 
 namespace LicenceStore.Application.Category.Queries;
@@ -25,6 +26,6 @@ public class GetOneCategoryQueryHandler : IRequestHandler<GetOneCategoryQuery, C
         if (category == null)
             throw new NotFoundException("Category not found");
         
-        return await _mapper.Map<Task<CategoryDetailsDto>>(category);
+        return _mapper.Map<CategoryDetailsDto>(category);
     }
 };

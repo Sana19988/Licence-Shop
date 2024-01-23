@@ -1,4 +1,5 @@
 ﻿using AspNetCore.Identity.MongoDbCore.Models;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Entities;
 using MongoDbGenericRepository.Attributes;
 
@@ -12,6 +13,8 @@ public class ApplicationUser : MongoIdentityUser<Guid>, IModifiedOn, IEntity
     public string? LastName { get; set; }
     public override string? Email { get; set; }
     public List<Licence> Licences { get; set; }
+    
+    [BsonElement("ApplicationUserRoles")]
     public List<string> Roles { get; set; }
     public double Balance { get; set; }
     

@@ -21,6 +21,6 @@ public class GetAllOrdersQueryHandler : IRequestHandler<GetAllOrdersQuery, List<
         var orders = await DB.Find<LicenceStore.Domain.Entities.Order>()
             .ManyAsync(o => o.Active == true, cancellationToken);
         
-        return await _mapper.Map<Task<List<OrderDetailsDto>>>(orders);
+        return _mapper.Map<List<OrderDetailsDto>>(orders);
     }
 };

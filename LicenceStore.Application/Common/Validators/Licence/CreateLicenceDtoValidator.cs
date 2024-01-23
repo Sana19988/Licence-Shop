@@ -33,8 +33,6 @@ public class CreateLicenceDtoValidator : AbstractValidator<CreateLicenceDto>
             .NotEmpty();
         RuleFor(licence => licence.TypeId)
             .NotEmpty();
-        RuleFor(licence => licence.OwnerId)
-            .NotEmpty();
         RuleFor(licence => licence.Price)
             .NotEmpty()
             .GreaterThanOrEqualTo(2000)

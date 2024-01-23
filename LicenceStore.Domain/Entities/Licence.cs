@@ -26,7 +26,7 @@ public class Licence : AuditableEntity
     public bool IsSold { get; set; }
     
     [Field("bought")]
-    public bool IsBougth { get; set; }
+    public bool IsBought { get; set; }
 
     [Field("price")]
     public double Price { get; set; }
@@ -38,7 +38,7 @@ public class Licence : AuditableEntity
     public string Description { get; set; }
     
     [Field("owner")]
-    public ApplicationUser Owner { get; set; }
+    public ApplicationUser? Owner { get; set; }
     
     [Field("startDate")]
     public DateTime StartDate { get; set; }

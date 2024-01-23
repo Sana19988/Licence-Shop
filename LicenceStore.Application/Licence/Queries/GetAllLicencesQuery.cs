@@ -21,6 +21,6 @@ public class GetAllLicencesQueryHandler : IRequestHandler<GetAllLicencesQuery, L
         var licences = await DB.Find<LicenceStore.Domain.Entities.Licence>()
             .ManyAsync(licence => licence.Active == true, cancellationToken);
         
-        return await _mapper.Map<Task<List<LicenceDetailsDto>>>(licences);
+        return _mapper.Map<List<LicenceDetailsDto>>(licences);
     }
 }
