@@ -6,7 +6,7 @@ public class CreateAdministratorModelValidator : AbstractValidator<CreateAdminis
 {
     public CreateAdministratorModelValidator()
     {
-        RuleFor(x => x.EmailAddress)
+        RuleFor(x => x.Admin.Email)
             .EmailAddress()
             .NotEmpty();
     }
