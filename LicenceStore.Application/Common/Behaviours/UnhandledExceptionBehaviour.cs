@@ -22,7 +22,7 @@ public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavio
         {
             var requestName = typeof(TRequest).Name;
             _logger.LogError(ex,
-                "RentalCar Request: Unhandled Exception for Request {Name} {@Request}",
+                "LicenceStore Request: Unhandled Exception for Request {Name} {@Request}",
                 requestName,
                 request);
 

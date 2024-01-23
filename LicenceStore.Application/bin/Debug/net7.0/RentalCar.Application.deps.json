@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "RentalCar.Application/1.0.0": {
+      "LicenceStore.Application/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "FluentValidation.AspNetCore": "11.3.0",
@@ -14,10 +14,10 @@
           "MediatR": "12.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "7.0.0",
-          "RentalCar.Domain": "1.0.0"
+          "LicenceStore.Domain": "1.0.0"
         },
         "runtime": {
-          "RentalCar.Application.dll": {}
+          "LicenceStore.Application.dll": {}
         }
       },
       "Ardalis.GuardClauses/4.1.1": {
@@ -433,7 +433,7 @@
           }
         }
       },
-      "RentalCar.Domain/1.0.0": {
+      "LicenceStore.Domain/1.0.0": {
         "dependencies": {
           "Ardalis.GuardClauses": "4.1.1",
           "Ardalis.SmartEnum": "7.0.0",
@@ -443,13 +443,13 @@
           "System.IdentityModel.Tokens.Jwt": "7.0.0"
         },
         "runtime": {
-          "RentalCar.Domain.dll": {}
+          "LicenceStore.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "RentalCar.Application/1.0.0": {
+    "LicenceStore.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -818,7 +818,7 @@
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
     },
-    "RentalCar.Domain/1.0.0": {
+    "LicenceStore.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
