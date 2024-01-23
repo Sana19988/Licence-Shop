@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LicenceStore.Application.Common.Dto;
 using LicenceStore.Application.Common.Dto.User;
 using LicenceStore.Domain.Entities;
 
@@ -10,7 +11,10 @@ public class MappingProfile : Profile
     {
         CreateMap<UpdateUserDto, ApplicationUser>().ReverseMap();
         CreateMap<ApplicationUser, UserDetailsDto>().ConstructUsing(x => GetUserDetails(x));
-        CreateMap<IEnumerable<ApplicationUser>, UserListDto>().ConstructUsing(x => GetUserList(x));
+        CreateMap<IEnumerable<ApplicationUser>, UserListDto>()
+            .ConstructUsing(x => GetUserList(x));
+        CreateMap<IEnumerable<Domain.Entities.ApplicationUser>, UserPagedListDto>()
+            .ConstructUsing(x => GetUserPagedList(x));
     }
 
     private static UserDetailsDto GetUserDetails(ApplicationUser user)
@@ -32,5 +36,12 @@ public class MappingProfile : Profile
     {
         var userList = users.Select(GetUserDetails).ToList();
         return new UserListDto(userList);
+    }
+    
+    private static UserPagedListDto GetUserPagedList(IEnumerable<Domain.Entities.ApplicationUser> users)
+    {
+        var userList = users.Select(GetUserDetails).ToList();
+        
+        return new UserPagedListDto(userList, new PaginationDto(0, 0));
     }
 }

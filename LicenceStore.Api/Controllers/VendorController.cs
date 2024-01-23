@@ -28,4 +28,8 @@ public class VendorController : ApiControllerBase
     public async Task<ActionResult<string>> DeleteVendor(DeleteVendorCommand command) =>
         Ok(await Mediator.Send(command));
     
+    [HttpGet("GetPagedListVendor")]
+    public async Task<ActionResult<VendorPagedListDto>> GetPagedListVendor([FromQuery] GetPagedListVendorQuery query) =>
+        Ok(await Mediator.Send(query));
+    
 }

@@ -56,4 +56,8 @@ public class UserController : ApiControllerBase
         await Mediator.Send(command);
         return Ok();
     }
+    
+    [HttpPut("PagedList")]
+    public async Task<ActionResult> PagedList([FromQuery] GetUserPagedListQuery query) =>
+        Ok(await Mediator.Send(query));
 }

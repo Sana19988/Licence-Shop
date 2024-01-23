@@ -1,6 +1,5 @@
 ﻿using LicenceStore.Application.Common.Dto.Licence;
 using LicenceStore.Application.Common.Interfaces;
-using LicenceStore.Domain.Entities;
 using MediatR;
 using MongoDB.Entities;
 
@@ -19,7 +18,7 @@ public record CreateLicenceCommandHandler : IRequestHandler<CreateLicenceCommand
 
     public async Task<string> Handle(CreateLicenceCommand request, CancellationToken cancellationToken)
     {
-        var vendor = await DB.Find<Vendor>()
+        var vendor = await DB.Find<Domain.Entities.Vendor>()
             .OneAsync(request.Licence.VendorId, cancellationToken);
 
         if (vendor == null)
@@ -50,7 +49,7 @@ public record CreateLicenceCommandHandler : IRequestHandler<CreateLicenceCommand
             Name = request.Licence.Name,
             StartDate = request.Licence.StartDate,
             EndDate = request.Licence.EndDate,
-            Vendor = new One<Vendor>(vendor),
+            Vendor = new One<Domain.Entities.Vendor>(vendor),
             Category = new One<Domain.Entities.Category>(category),
             Type = new One<Domain.Entities.LicenceType>(type),
             IsSold = request.Licence.IsSold,
