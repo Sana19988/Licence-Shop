@@ -11,10 +11,12 @@ namespace LicenceStore.Infrastructure.Auth;
 public class UserService : IUserService
 {
     private readonly ApplicationUserManager _userManager;
+    private readonly RoleManager<ApplicationRole> _roleManager;
     
-    public UserService(ApplicationUserManager userManager)
+    public UserService(ApplicationUserManager userManager, RoleManager<ApplicationRole> roleManager)
     {
         _userManager = userManager;
+        _roleManager = roleManager;
     }
 
     public async Task CreateUserAsync(CreateUserDto user, List<string> roles)
@@ -36,14 +38,21 @@ public class UserService : IUserService
 
         try
         {
-            foreach (var roleName in roles)
+            foreach (var role in roles)
             {
-                // Provera postojanja uloge pre dodavanja
-                if (!await IsInRoleAsync(newUser, roleName))
+                var roleName = role.ToUpper();
+                
+                var roleExist = await _roleManager.RoleExistsAsync(roleName);
+                if (!roleExist)
                 {
-                    await _userManager.AddToRoleAsync(newUser, roleName);
+                    var roleResult = await _roleManager.CreateAsync(new ApplicationRole { Name = roleName });
+                    if (!roleResult.Succeeded)
+                    {
+                        throw new Exception("Failed role creation.");
+                    }
                 }
             }
+
             
             newUser.Claims.Add(new MongoClaim { Type = ClaimTypes.Email, Value = user.Email });
             newUser.Claims.AddRange(roles.Select(userRole => new MongoClaim
