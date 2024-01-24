@@ -94,28 +94,21 @@ builder.Services
 
 var corsConfiguration = new CorsConfiguration();
 
-builder.Configuration
-    .GetSection("CorsConfiguration")
-    .Bind(corsConfiguration);
 
-builder.Services.AddCors(options => options.AddPolicy(ConstantsConfiguration.AllowedOrigins!,
-    x => x.WithMethods("GET",
-            "POST",
-            "PATCH",
-            "DELETE",
-            "OPTIONS",
-            "PUT")
-        .WithHeaders(HeaderNames.Accept,
-            HeaderNames.ContentType,
-            HeaderNames.Authorization,
-            HeaderNames.XRequestedWith,
-            "x-signalr-user-agent")
-        .AllowCredentials()
-        .WithOrigins(corsConfiguration.AllowedOrigins!)));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AnyOrigin", builder =>
+    {
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod();
+    });
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
+app.UseCors("AnyOrigin");
 
 if (app.Environment.IsDevelopment())
 {
