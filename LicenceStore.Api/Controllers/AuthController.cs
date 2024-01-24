@@ -17,7 +17,6 @@ public class AuthController : ApiControllerBase
         return Ok();
     }
     
-    
     [AllowAnonymous]
     [HttpPost("BeginLogin")]
     public async Task<ActionResult> BeginLogin(BeginLoginCommand command) => Ok(await Mediator.Send(command));
