@@ -36,6 +36,15 @@ public class UserService : IUserService
 
         try
         {
+            foreach (var roleName in roles)
+            {
+                // Provera postojanja uloge pre dodavanja
+                if (!await IsInRoleAsync(newUser, roleName))
+                {
+                    await _userManager.AddToRoleAsync(newUser, roleName);
+                }
+            }
+            
             newUser.Claims.Add(new MongoClaim { Type = ClaimTypes.Email, Value = user.Email });
             newUser.Claims.AddRange(roles.Select(userRole => new MongoClaim
             {
