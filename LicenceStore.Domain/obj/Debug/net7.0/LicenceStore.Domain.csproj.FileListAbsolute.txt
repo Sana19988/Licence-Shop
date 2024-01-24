@@ -1,0 +1,12 @@
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\bin\Debug\net7.0\LicenceStore.Domain.deps.json
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\bin\Debug\net7.0\LicenceStore.Domain.dll
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\bin\Debug\net7.0\LicenceStore.Domain.pdb
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.csproj.AssemblyReference.cache
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.AssemblyInfoInputs.cache
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.AssemblyInfo.cs
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.csproj.CoreCompileInputs.cache
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.dll
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\refint\LicenceStore.Domain.dll
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\LicenceStore.Domain.pdb
+D:\FAKS\UPS\BISI VEZBE\LicenceStore\LicenceStore\LicenceStore.Domain\obj\Debug\net7.0\ref\LicenceStore.Domain.dll
