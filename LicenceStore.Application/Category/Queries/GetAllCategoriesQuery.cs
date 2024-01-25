@@ -21,6 +21,6 @@ public class GetAllCategoriesQueryHandler : IRequestHandler<GetAllCategoriesQuer
         var categories = await DB.Find<LicenceStore.Domain.Entities.Category>()
             .ManyAsync(cat => cat.Active == true, cancellationToken);
         
-        return await _mapper.Map<Task<List<CategoryDetailsDto>>>(categories);
+        return _mapper.Map<List<CategoryDetailsDto>>(categories);
     }
 }

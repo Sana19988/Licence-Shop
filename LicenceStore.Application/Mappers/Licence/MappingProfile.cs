@@ -12,6 +12,9 @@ public class MappingProfile : Profile
         CreateMap<UpdateLicenceDto, LicenceStore.Domain.Entities.Licence>().ReverseMap();
         CreateMap<LicenceStore.Domain.Entities.Licence, Task<LicenceDetailsDto>>()
             .ConstructUsing(x => GetLicenceDetails(x));
+        
+        CreateMap<IEnumerable<Domain.Entities.Licence>, LicenceListDto>()
+            .ConstructUsing(l => GetLicenceList(l));
         CreateMap<IEnumerable<Domain.Entities.Licence>, LicencePagedListDto>()
             .ConstructUsing(l => GetLicencePagedList(l));
     }
@@ -28,18 +31,23 @@ public class MappingProfile : Profile
             (await licence.Type.ToEntityAsync())!.Name,
             licence.Owner.Email,
             licence.IsSold,
-            licence.IsBougth,
+            licence.IsBought,
             licence.Price,
             licence.Img,
             licence.Description
         );
     }
     
+    private static LicenceListDto GetLicenceList(IEnumerable<Domain.Entities.Licence> licences)
+    {
+        var licencesList = licences.Select(x => GetLicenceDetails(x).Result).ToList();
+        return new LicenceListDto(licencesList);
+    }
+
     private static LicencePagedListDto GetLicencePagedList(IEnumerable<Domain.Entities.Licence> licences)
     {
-        var licenceList = licences.Select(GetLicenceDetails).ToList();
-        
-        return new LicencePagedListDto(licenceList, new PaginationDto(0, 0));
+        var licencesList = licences.Select(x => GetLicenceDetails(x).Result).ToList();
+
+        return new LicencePagedListDto(licencesList, new PaginationDto(0, 0));
     }
-    
 }

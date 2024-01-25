@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "RentalCar.Domain/1.0.0": {
+      "LicenceStore.Domain/1.0.0": {
         "dependencies": {
           "Ardalis.GuardClauses": "4.1.1",
           "Ardalis.SmartEnum": "7.0.0",
@@ -16,7 +16,7 @@
           "System.IdentityModel.Tokens.Jwt": "7.0.0"
         },
         "runtime": {
-          "RentalCar.Domain.dll": {}
+          "LicenceStore.Domain.dll": {}
         }
       },
       "Ardalis.GuardClauses/4.1.1": {
@@ -444,7 +444,7 @@
     }
   },
   "libraries": {
-    "RentalCar.Domain/1.0.0": {
+    "LicenceStore.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

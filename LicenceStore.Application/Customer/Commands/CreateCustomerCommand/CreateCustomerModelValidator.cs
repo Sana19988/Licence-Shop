@@ -6,8 +6,8 @@ public class CreateCustomerModelValidator : AbstractValidator<CreateCustomerComm
 {
     public CreateCustomerModelValidator()
     {
-        RuleFor(x => x.EmailAddress)
-            .EmailAddress()
-            .NotEmpty();
+        RuleFor(x => x.Customer.Email)
+            .EmailAddress().WithMessage("Email is required!")
+            .NotEmpty().WithMessage("Email address not valid!");
     }
 }

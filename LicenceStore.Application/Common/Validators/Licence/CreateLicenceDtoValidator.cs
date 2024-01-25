@@ -19,6 +19,8 @@ public class CreateLicenceDtoValidator : AbstractValidator<CreateLicenceDto>
 {
     public CreateLicenceDtoValidator()
     {
+        RuleFor(licence => licence.OwnerId)
+            .NotEmpty();
         RuleFor(licence => licence.Name)
             .MaximumLength(512)
             .MinimumLength(3)
@@ -32,8 +34,6 @@ public class CreateLicenceDtoValidator : AbstractValidator<CreateLicenceDto>
         RuleFor(licence => licence.CategoryId)
             .NotEmpty();
         RuleFor(licence => licence.TypeId)
-            .NotEmpty();
-        RuleFor(licence => licence.OwnerId)
             .NotEmpty();
         RuleFor(licence => licence.Price)
             .NotEmpty()

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FAKS\\UPS\\BISI VEZBE\\RentalCarAuth\\RentalCar\\RentalCar.Domain\\RentalCar.Domain.csproj": {}
+    "D:\\FAKS\\UPS\\BISI VEZBE\\LicenceStoreAuth\\LicenceStore\\LicenceStore.Domain\\LicenceStore.Domain.csproj": {}
   },
   "projects": {
-    "D:\\FAKS\\UPS\\BISI VEZBE\\RentalCarAuth\\RentalCar\\RentalCar.Domain\\RentalCar.Domain.csproj": {
+    "D:\\FAKS\\UPS\\BISI VEZBE\\LicenceStoreAuth\\LicenceStore\\LicenceStore.Domain\\LicenceStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FAKS\\UPS\\BISI VEZBE\\RentalCarAuth\\RentalCar\\RentalCar.Domain\\RentalCar.Domain.csproj",
-        "projectName": "RentalCar.Domain",
-        "projectPath": "D:\\FAKS\\UPS\\BISI VEZBE\\RentalCarAuth\\RentalCar\\RentalCar.Domain\\RentalCar.Domain.csproj",
+        "projectUniqueName": "D:\\FAKS\\UPS\\BISI VEZBE\\LicenceStoreAuth\\LicenceStore\\LicenceStore.Domain\\LicenceStore.Domain.csproj",
+        "projectName": "LicenceStore.Domain",
+        "projectPath": "D:\\FAKS\\UPS\\BISI VEZBE\\LicenceStoreAuth\\LicenceStore\\LicenceStore.Domain\\LicenceStore.Domain.csproj",
         "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "D:\\FAKS\\UPS\\BISI VEZBE\\RentalCarAuth\\RentalCar\\RentalCar.Domain\\obj\\",
+        "outputPath": "D:\\FAKS\\UPS\\BISI VEZBE\\LicenceStoreAuth\\LicenceStore\\LicenceStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config"

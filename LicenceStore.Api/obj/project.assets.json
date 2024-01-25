@@ -1056,7 +1056,8 @@
         "dependencies": {
           "LicenceStore.Application": "1.0.0",
           "LicenceStore.Domain": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.11"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.11",
+          "Microsoft.Extensions.Identity.Core": "3.1.12"
         },
         "compile": {
           "bin/placeholder/LicenceStore.Infrastructure.dll": {}

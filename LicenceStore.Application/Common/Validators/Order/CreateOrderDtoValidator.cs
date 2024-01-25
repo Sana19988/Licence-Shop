@@ -11,7 +11,7 @@ public class CreateOrderDtoValidator : AbstractValidator<CreateOrderDto>
             .NotEmpty()
             .MinimumLength(3);
         RuleFor(o => o.LicenceIds)
-            .Must(list => list.Count >= 3)
+            .Must(list => list.Count >= 1)
             .WithMessage("There must be at least one licence");
     }
     
