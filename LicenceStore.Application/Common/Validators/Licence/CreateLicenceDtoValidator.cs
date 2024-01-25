@@ -19,6 +19,8 @@ public class CreateLicenceDtoValidator : AbstractValidator<CreateLicenceDto>
 {
     public CreateLicenceDtoValidator()
     {
+        RuleFor(licence => licence.OwnerId)
+            .NotEmpty();
         RuleFor(licence => licence.Name)
             .MaximumLength(512)
             .MinimumLength(3)

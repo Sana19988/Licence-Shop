@@ -38,7 +38,7 @@ public class Licence : AuditableEntity
     public string Description { get; set; }
     
     [Field("owner")]
-    public ApplicationUser? Owner { get; set; }
+    public ApplicationUser Owner { get; set; }
     
     [Field("startDate")]
     public DateTime StartDate { get; set; }

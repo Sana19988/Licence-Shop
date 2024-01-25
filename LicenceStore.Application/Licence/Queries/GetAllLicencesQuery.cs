@@ -5,9 +5,9 @@ using MongoDB.Entities;
 
 namespace LicenceStore.Application.Licence.Queries;
 
-public record GetAllLicencesQuery : IRequest<List<LicenceDetailsDto>>;
+public record GetAllLicencesQuery : IRequest<LicenceListDto>;
 
-public class GetAllLicencesQueryHandler : IRequestHandler<GetAllLicencesQuery, List<LicenceDetailsDto>>
+public class GetAllLicencesQueryHandler : IRequestHandler<GetAllLicencesQuery, LicenceListDto>
 {
     private readonly IMapper _mapper;
 
@@ -16,11 +16,9 @@ public class GetAllLicencesQueryHandler : IRequestHandler<GetAllLicencesQuery, L
         _mapper = mapper;
     }
     
-    public async Task<List<LicenceDetailsDto>> Handle(GetAllLicencesQuery request, CancellationToken cancellationToken)
+    public async Task<LicenceListDto> Handle(GetAllLicencesQuery request, CancellationToken cancellationToken)
     {
-        var licences = await DB.Find<LicenceStore.Domain.Entities.Licence>()
-            .ManyAsync(licence => licence.Active == true, cancellationToken);
-        
-        return _mapper.Map<List<LicenceDetailsDto>>(licences);
+        return _mapper.Map<LicenceListDto>(await DB.Find<Domain.Entities.Licence>()
+            .ExecuteAsync(cancellation: cancellationToken));
     }
 }

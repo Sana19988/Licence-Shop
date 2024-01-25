@@ -36,6 +36,11 @@ public class UserService : IUserService
             Roles = new List<string>()
         };
 
+        if (roles.Contains("Customer"))
+        {
+            newUser.Balance = 10000;
+        }
+
         try
         {
             foreach (var role in roles)

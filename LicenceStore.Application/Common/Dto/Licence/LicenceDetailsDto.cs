@@ -7,7 +7,7 @@ public record LicenceDetailsDto(
     string Vendor,
     string Category,
     string Type,
-    string? Owner,
+    string Owner,
     bool IsSold,
     bool IsBought,
     double Price,
